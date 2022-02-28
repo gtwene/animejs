@@ -7,32 +7,63 @@ var modal = document.getElementById("myModal");
 var btn = document.getElementById("myBtn");
 
 // Get the <span> element that closes the modal
-var span = document.getElementsByClassName("close")[0];
+var span = document.getElementsByClassName("minimize")[0];
 
 // When the user clicks the button, open the modal
 btn.onclick = function () {
   modal.style.display = "block";
 };
 
-// When the user clicks on <span> (x), close the modal
-span.onclick = function () {
-  modal.style.display = "none";
+var modalID = document.getElementById("modalId");
+
+var hidebtn = document.getElementById("hidden");
+
+hidebtn.onclick = function () {
+  modal.style.display = modal;
 };
+
+// close the modal
+// span.onclick = function () {
+//   modal.style.display = "none";
+// };
+
+var hideShow;
+hidebtn.addEventListener("click", function () {
+  if (hideShow == 1) {
+    modal.style.display = "inline";
+
+    return (hideShow = 0);
+  } else {
+    modal.style.display = "none";
+
+    return (hideShow = 1);
+  }
+});
+
+// modalID.addEventListener("click", show());
 
 span.addEventListener("click", function () {
   anime({
-    targets: "div.box.red",
+    targets: "div.modal.box",
 
     // left: "1000px",
-    translateY: (-1000, 650),
+    translateY: (-100, 60),
 
-    translateX: (-1000, 1200),
+    translateX: (-100, 150),
 
-    scale: 0.5,
-    backgroundColor: "#C23214 ",
-    borderRadius: ["0", "50%"],
+    scale: 0.25,
+    backgroundColor: "#aba5a4 ",
+    // borderRadius: ["0", "50%"],
     easing: "easeInOutQuad",
   });
+
+  anime({
+    targets: "div.modal.box",
+    width: "130%",
+
+    loop: false,
+  });
+  console.log("active");
 });
 
 // When the user clicks anywhere outside of the modal, close it

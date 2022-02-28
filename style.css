@@ -47,15 +47,15 @@
 }
 
 /* The Close Button */
-.close {
+.minimize {
   color: #aaaaaa;
   float: right;
   font-size: 28px;
   font-weight: bold;
 }
 
-.close:hover,
-.close:focus {
+.minimize:hover,
+.minimize:focus {
   color: #000;
   text-decoration: none;
   cursor: pointer;
@@ -65,4 +65,8 @@
   background-color: blueviolet;
   border-radius: 5px;
   padding: 5px;
+}
+
+button {
+ 
 }
