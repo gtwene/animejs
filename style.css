@@ -67,6 +67,8 @@
   padding: 5px;
 }
 
-button {
+.hide {
+ margin: 500px;
+ padding: 10px;
  
 }

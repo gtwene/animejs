@@ -17,43 +17,29 @@ btn.onclick = function () {
 var modalID = document.getElementById("modalId");
 
 var hidebtn = document.getElementById("hidden");
+hidebtn.style.display = "none";
 
-hidebtn.onclick = function () {
-  modal.style.display = modal;
-};
+// hidebtn.onclick = function () {
+//   modal.style.display = modal;
+// };
 
 // close the modal
 // span.onclick = function () {
 //   modal.style.display = "none";
 // };
 
-var hideShow;
-hidebtn.addEventListener("click", function () {
-  if (hideShow == 1) {
-    modal.style.display = "inline";
-
-    return (hideShow = 0);
-  } else {
-    modal.style.display = "none";
-
-    return (hideShow = 1);
-  }
-});
-
-// modalID.addEventListener("click", show());
-
 span.addEventListener("click", function () {
   anime({
     targets: "div.modal.box",
 
     // left: "1000px",
-    translateY: (-100, 60),
+    translateY: (-500, 400),
 
-    translateX: (-100, 150),
+    translateX: (-500, 300),
 
     scale: 0.25,
     backgroundColor: "#aba5a4 ",
-    // borderRadius: ["0", "50%"],
+
     easing: "easeInOutQuad",
   });
 
