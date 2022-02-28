@@ -22,9 +22,15 @@ span.onclick = function () {
 span.addEventListener("click", function () {
   anime({
     targets: "div.box.red",
-    left: "1000px",
+
+    // left: "1000px",
+    translateY: (-1000, 650),
+
+    translateX: (-1000, 1200),
+
+    scale: 0.5,
     backgroundColor: "#C23214 ",
-    borderRadius: ["0%", "100"],
+    borderRadius: ["0", "50%"],
     easing: "easeInOutQuad",
   });
 });
